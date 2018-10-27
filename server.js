@@ -8,7 +8,7 @@ app.use(express.urlencoded({
     extended: true
 }));
 app.use(express.json());
-
+app.use(express.static(__dirname + '/public/'));
 
 var reservations = [{
         customerName: "James Bond",
@@ -32,15 +32,15 @@ var waitlists = [{
 }]
 
 app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
 app.get("/view", function (req, res) {
-    res.sendFile(path.join(__dirname, "view.html"));
+    res.sendFile(path.join(__dirname, "public/view.html"));
 });
 
 app.get("/make", function (req, res) {
-    res.sendFile(path.join(__dirname, "make.html"));
+    res.sendFile(path.join(__dirname, "public/make.html"));
 });
 
 
@@ -49,9 +49,9 @@ app.get("/make", function (req, res) {
 // });
 
 // app.get("/api/reservations/:reservation", function (req, res) {
-//     var chosen = req.params.reservation;
+//     var tables = req.params.reservation;
 
-//     console.log(chosen);
+//     console.log(tables);
 
 //     for (var i = 0; i < reservations.length; i++) {
 //         if (tables === reservations[i].routeName) {
