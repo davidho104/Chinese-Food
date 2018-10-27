@@ -74,23 +74,6 @@ app.get("/make", function (req, res) {
 //     res.json(newreservation);
 // });
 
-$("#add-btn").on("click", function(event) {
-    event.preventDefault();
-    var newTable = {
-        customerName: $("#name").val().trim(),
-        phoneNumber: $("#phoneNumber").val().trim(),
-        customerEmail: $("#email").val().trim(),
-        customerID: $("#customerID").val().trim()
-    };
-
-    // Question: What does this code do??
-    $.post("/tables", newTable)
-      .then(function(data) {
-        console.log("add.html", data);
-        alert("Adding table...");
-      });
-  });
-
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
