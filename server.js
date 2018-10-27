@@ -24,6 +24,13 @@ var reservations = [{
     }
 ];
 
+var waitlists = [{
+    customerName: "Andrew Klatzke",
+        phoneNumber: "512-182-9182",
+        customerEmail: "andrew.klatzke@gmail.com",
+        customerID: 6,
+}]
+
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "index.html"));
 });
@@ -47,7 +54,7 @@ app.get("/make", function (req, res) {
 //     console.log(chosen);
 
 //     for (var i = 0; i < reservations.length; i++) {
-//         if (chosen === reservations[i].routeName) {
+//         if (tables === reservations[i].routeName) {
 //             return res.json(reservations[i]);
 //         }
 //     }
