@@ -1,5 +1,6 @@
 body {
-    background: url("https://futuredish.com/wp-content/uploads/2018/01/Mapo-Tofu-1.jpg")
+    background: url("https://futuredish.com/wp-content/uploads/2018/01/Mapo-Tofu-1.jpg");
+    background-size:  100%; 
 }
 
 header{
