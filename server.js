@@ -17,7 +17,7 @@ var reservations = [{
         customerID: 1,
     },
     {
-        customerName: "Ronald Mcdonald",
+        customerName: "Ronald McDonald",
         phoneNumber: "512-123-1234",
         customerEmail: "ronald.mcdonald@gmail.com",
         customerID: 2,
@@ -44,35 +44,39 @@ app.get("/make", function (req, res) {
 });
 
 
-// app.get("/api/reservations", function (req, res) {
-//     return res.json(reservations);
-// });
+app.get("/api/reservations", function (req, res) {
+    return res.json(reservations);
+});
 
-// app.get("/api/reservations/:reservation", function (req, res) {
-//     var tables = req.params.reservation;
+app.get("/api/waitlist", function (req, res) {
+  return res.json(waitlists);
+});
 
-//     console.log(tables);
+app.get("/api/reservations/:reservation", function (req, res) {
+    var tables = req.params.reservation;
 
-//     for (var i = 0; i < reservations.length; i++) {
-//         if (tables === reservations[i].routeName) {
-//             return res.json(reservations[i]);
-//         }
-//     }
+    console.log(tables);
 
-//     return res.json(false);
-// });
+    for (var i = 0; i < reservations.length; i++) {
+        if (tables === reservations[i].routeName) {
+            return res.json(reservations[i]);
+        }
+    }
 
-// app.post("/api/reservations", function (req, res) {
-//     var newreservation = req.body;
+    return res.json(false);
+});
 
-//     newreservation.routeName = newreservation.name.replace(/\s+/g, "").toLowerCase();
+app.post("/api/reservations", function (req, res) {
+    var newreservation = req.body;
 
-//     console.log(newreservation);
+    newreservation.routeName = newreservation.name.replace(/\s+/g, "").toLowerCase();
 
-//     reservations.push(newreservation);
+    console.log(newreservation);
 
-//     res.json(newreservation);
-// });
+    reservations.push(newreservation);
+
+    res.json(newreservation);
+});
 
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
