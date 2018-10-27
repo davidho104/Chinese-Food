@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/make.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 <body>
@@ -19,7 +21,7 @@
         </div>
         <!-- Button Row-->
         <div class="row flex">
-            <!-- Make Reservation Button-->
+            <!-- View Reservation Button-->
             <div class="col">
                 <a href="view" class="waves-effect waves-light btn-large">View Reservation</a>
             </div>
@@ -29,5 +31,20 @@
             </div>
         </div>
     </header>
+    <!-- Make Reservation Table -->
+    <br>
+    <section class="container">
+        <!-- Table Header -->
+        <h5>Make a Reservation</h5>
+        <form>
+            <!-- Input Options -->
+            <input type="text" name="firstName" placeholder="Name">
+            <input type="text" name="phoneNumber" placeholder="Phone Number">
+            <input type="text" name="email" placeholder="Email">
+            <input type="text" name="uniqueID" placeholder="Unique ID">
+            <!-- Submit Button -->
+            <a class="waves-effect waves-light btn-small">Submit</a>
+        </form>
+    </section>
 </body>
 </html>
