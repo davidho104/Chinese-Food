@@ -67,6 +67,6 @@ app.get("/make", function (req, res) {
 //     res.json(newreservation);
 // });
 
-// app.listen(PORT, function () {
-//     console.log("App listening on PORT " + PORT);
-// });
+app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
+});
