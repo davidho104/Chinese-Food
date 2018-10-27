@@ -11,16 +11,18 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
+
 <body>
+<div class="container">
     <!-- Header -->
-    <header class="container">
+    <header>
         <!-- Restraunt Name -->
         <div class="row">
            <h1 class="name">Uncle Lee's Mapo Tofu</h1>
         </div>
         <!-- Button Row-->
         <div class="row flex">
-            <!-- View Reservation Button-->
+            <!-- Make Reservation Button-->
             <div class="col">
                 <a href="make" class="margin waves-effect waves-light btn-large">Make Reservations</a>
             </div>
@@ -30,5 +32,33 @@
             </div>
         </div>
     </header>
+
+<div class="row view">
+    <div class="col-lg-12">
+        <!-- Current Tables in Use -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">Current Reservations</h4>
+            </div>
+            <div class="panel-body" id="tableSection">
+            <div class="well" id="tableWell-01"><h2><span class="label label-primary">1</span> | </h2></div>
+            <div class="well" id="tableWell-11"><h2><span class="label label-primary">2</span> | </h2></div>
+            <div class="well" id="tableWell-21"><h2><span class="label label-primary">3</span> | </h2></div>
+        </div>
+        
+
+        <!-- Waiting List Panel -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">Waiting List</h4>
+            </div>
+            <div class="panel-body" id="waitlistSection">
+            </div>
+        </div>
+    </div>
+</div>
+
+</div><!--End of main Div-->
+
 </body>
 </html>
