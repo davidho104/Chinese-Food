@@ -1,0 +1,23 @@
+body {
+    background: url("https://futuredish.com/wp-content/uploads/2018/01/Mapo-Tofu-1.jpg")
+}
+
+header{
+    background: white;
+    padding: 10px;
+}
+
+.name{
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.margin{
+    margin-left:3%px;
+}
